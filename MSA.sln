@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4CFC26E0-9D91-4228-A988-D8C5BA5C7BBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Application", "src\Common\Common.Application\Common.Application.csproj", "{167A024B-2A59-4C34-A59B-DF3E9A53F995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Application", "src\Common\Common.Application\Common.Application.csproj", "{167A024B-2A59-4C34-A59B-DF3E9A53F995}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain", "src\Common\Common.Domain\Common.Domain.csproj", "{A16155B6-E1FE-4B3B-BA6F-4E35356F2D94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Domain", "src\Common\Common.Domain\Common.Domain.csproj", "{A16155B6-E1FE-4B3B-BA6F-4E35356F2D94}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delivery", "Delivery", "{4D0350BE-FC42-4919-B527-C6875D04C402}"
 EndProject
@@ -25,45 +25,55 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer", "Consumer", "{DA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Restaurant", "Restaurant", "{3EA59A12-898C-4E34-BBB2-21F360A38C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer.Domain", "src\Services\Consumer\Consumer.Domain\Consumer.Domain.csproj", "{9BAEAE61-1834-498F-80E0-C38E54473159}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer.Domain", "src\Services\Consumer\Consumer.Domain\Consumer.Domain.csproj", "{9BAEAE61-1834-498F-80E0-C38E54473159}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer.Application", "src\Services\Consumer\Consumer.Application\Consumer.Application.csproj", "{BD11EEB2-E573-48A0-8760-716285394A95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer.Application", "src\Services\Consumer\Consumer.Application\Consumer.Application.csproj", "{BD11EEB2-E573-48A0-8760-716285394A95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer.Infrastructure", "src\Services\Consumer\Consumer.Infrastructure\Consumer.Infrastructure.csproj", "{3662B608-B30C-42DF-8889-21F3357394CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer.Infrastructure", "src\Services\Consumer\Consumer.Infrastructure\Consumer.Infrastructure.csproj", "{3662B608-B30C-42DF-8889-21F3357394CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.Domain", "src\Services\Delivery\Delivery.Domain\Delivery.Domain.csproj", "{7918DB3E-4C06-4E65-A41B-E3A8CB4D05E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.Domain", "src\Services\Delivery\Delivery.Domain\Delivery.Domain.csproj", "{7918DB3E-4C06-4E65-A41B-E3A8CB4D05E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.Application", "src\Services\Delivery\Delivery.Application\Delivery.Application.csproj", "{3ACB5ABA-9FF7-4E2C-A2B4-E980FE9032C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.Application", "src\Services\Delivery\Delivery.Application\Delivery.Application.csproj", "{3ACB5ABA-9FF7-4E2C-A2B4-E980FE9032C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.Infrastructure", "src\Services\Delivery\Delivery.Infrastructure\Delivery.Infrastructure.csproj", "{F2D5BBFD-3143-4AD7-B522-94DF9A0CBDBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.Infrastructure", "src\Services\Delivery\Delivery.Infrastructure\Delivery.Infrastructure.csproj", "{F2D5BBFD-3143-4AD7-B522-94DF9A0CBDBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitchen.Domain", "src\Services\Kitchen\Kitchen.Domain\Kitchen.Domain.csproj", "{E5F6B253-4D9A-40C9-BCE0-197A447AB6DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitchen.Domain", "src\Services\Kitchen\Kitchen.Domain\Kitchen.Domain.csproj", "{E5F6B253-4D9A-40C9-BCE0-197A447AB6DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitchen.Application", "src\Services\Kitchen\Kitchen.Application\Kitchen.Application.csproj", "{4D92BA6B-5E6E-4F49-BD87-60508B80F813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitchen.Application", "src\Services\Kitchen\Kitchen.Application\Kitchen.Application.csproj", "{4D92BA6B-5E6E-4F49-BD87-60508B80F813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitchen.Infrastructure", "src\Services\Kitchen\Kitchen.Infrastructure\Kitchen.Infrastructure.csproj", "{33DAA8A6-D3AA-4BC2-B3C4-44941E24307B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitchen.Infrastructure", "src\Services\Kitchen\Kitchen.Infrastructure\Kitchen.Infrastructure.csproj", "{33DAA8A6-D3AA-4BC2-B3C4-44941E24307B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Domain", "src\Services\Order\Order.Domain\Order.Domain.csproj", "{25752212-6A87-4C7D-9BE7-41D9171B1C5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Domain", "src\Services\Order\Order.Domain\Order.Domain.csproj", "{25752212-6A87-4C7D-9BE7-41D9171B1C5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Application", "src\Services\Order\Order.Application\Order.Application.csproj", "{6C703C87-64C5-47D0-9783-F8651F342462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Application", "src\Services\Order\Order.Application\Order.Application.csproj", "{6C703C87-64C5-47D0-9783-F8651F342462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Infrastructure", "src\Services\Order\Order.Infrastructure\Order.Infrastructure.csproj", "{ADAE6FB3-EFFA-4A0A-AFE3-D1F7FDEFED35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Infrastructure", "src\Services\Order\Order.Infrastructure\Order.Infrastructure.csproj", "{ADAE6FB3-EFFA-4A0A-AFE3-D1F7FDEFED35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Domain", "src\Services\Restaurant\Restaurant.Domain\Restaurant.Domain.csproj", "{64D8AC9A-B2BE-42AB-ADBC-7B547E1E30F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Domain", "src\Services\Restaurant\Restaurant.Domain\Restaurant.Domain.csproj", "{64D8AC9A-B2BE-42AB-ADBC-7B547E1E30F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Application", "src\Services\Restaurant\Restaurant.Application\Restaurant.Application.csproj", "{52168CEF-EE26-4D9F-9649-8BEA688ACE11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Application", "src\Services\Restaurant\Restaurant.Application\Restaurant.Application.csproj", "{52168CEF-EE26-4D9F-9649-8BEA688ACE11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Infrastructure", "src\Services\Restaurant\Restaurant.Infrastructure\Restaurant.Infrastructure.csproj", "{5D362172-B57B-419F-ACE0-4610648B4005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Infrastructure", "src\Services\Restaurant\Restaurant.Infrastructure\Restaurant.Infrastructure.csproj", "{5D362172-B57B-419F-ACE0-4610648B4005}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer.API", "src\Services\Consumer\Consumer.API\Consumer.API.csproj", "{F2C283FF-1655-4D86-92DA-B9550C898A48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer.API", "src\Services\Consumer\Consumer.API\Consumer.API.csproj", "{F2C283FF-1655-4D86-92DA-B9550C898A48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.API", "src\Services\Delivery\Delivery.API\Delivery.API.csproj", "{ACF812F7-59BD-43B9-AA2C-986132B28EC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.API", "src\Services\Delivery\Delivery.API\Delivery.API.csproj", "{ACF812F7-59BD-43B9-AA2C-986132B28EC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitchen.API", "src\Services\Kitchen\Kitchen.API\Kitchen.API.csproj", "{4F662B74-76C0-4D36-AD69-2130F667B4BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitchen.API", "src\Services\Kitchen\Kitchen.API\Kitchen.API.csproj", "{4F662B74-76C0-4D36-AD69-2130F667B4BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "src\Services\Order\Order.API\Order.API.csproj", "{43E3A2F4-EECB-4F0E-91A7-B6D2B67DBF51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.API", "src\Services\Order\Order.API\Order.API.csproj", "{43E3A2F4-EECB-4F0E-91A7-B6D2B67DBF51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.API", "src\Services\Restaurant\Restaurant.API\Restaurant.API.csproj", "{9DB93EAD-DAE8-4AD8-B522-4901E226726E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.API", "src\Services\Restaurant\Restaurant.API\Restaurant.API.csproj", "{9DB93EAD-DAE8-4AD8-B522-4901E226726E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounting", "Accounting", "{8555C3C7-F99C-48B3-838B-06682E0BC02E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.API", "src\Services\Accounting\Accounting.API\Accounting.API.csproj", "{4A4C543C-BDF1-4C42-BD5F-BBF5F3F03539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.Application", "src\Services\Accounting\Accounting.Application\Accounting.Application.csproj", "{B3593D14-99FC-4047-BB24-AD44A80097C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.Domain", "src\Services\Accounting\Accounting.Domain\Accounting.Domain.csproj", "{D3908111-928A-450B-B2E7-A01AFC536AC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.Infrastructure", "src\Services\Accounting\Accounting.Infrastructure\Accounting.Infrastructure.csproj", "{471B6905-067D-4852-8E2B-DA547DBB7313}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +169,22 @@ Global
 		{9DB93EAD-DAE8-4AD8-B522-4901E226726E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DB93EAD-DAE8-4AD8-B522-4901E226726E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DB93EAD-DAE8-4AD8-B522-4901E226726E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4C543C-BDF1-4C42-BD5F-BBF5F3F03539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4C543C-BDF1-4C42-BD5F-BBF5F3F03539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4C543C-BDF1-4C42-BD5F-BBF5F3F03539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4C543C-BDF1-4C42-BD5F-BBF5F3F03539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3593D14-99FC-4047-BB24-AD44A80097C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3593D14-99FC-4047-BB24-AD44A80097C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3593D14-99FC-4047-BB24-AD44A80097C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3593D14-99FC-4047-BB24-AD44A80097C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3908111-928A-450B-B2E7-A01AFC536AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3908111-928A-450B-B2E7-A01AFC536AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3908111-928A-450B-B2E7-A01AFC536AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3908111-928A-450B-B2E7-A01AFC536AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471B6905-067D-4852-8E2B-DA547DBB7313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471B6905-067D-4852-8E2B-DA547DBB7313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471B6905-067D-4852-8E2B-DA547DBB7313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471B6905-067D-4852-8E2B-DA547DBB7313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,6 +219,11 @@ Global
 		{4F662B74-76C0-4D36-AD69-2130F667B4BB} = {C2CE56C2-3CFC-4A4D-B60A-F0C933EA8630}
 		{43E3A2F4-EECB-4F0E-91A7-B6D2B67DBF51} = {B44AA178-B267-4C80-AB06-E76D2A4DCAAA}
 		{9DB93EAD-DAE8-4AD8-B522-4901E226726E} = {3EA59A12-898C-4E34-BBB2-21F360A38C5C}
+		{8555C3C7-F99C-48B3-838B-06682E0BC02E} = {0FE883C5-5539-4D9B-8116-E3A25A64E3F7}
+		{4A4C543C-BDF1-4C42-BD5F-BBF5F3F03539} = {8555C3C7-F99C-48B3-838B-06682E0BC02E}
+		{B3593D14-99FC-4047-BB24-AD44A80097C9} = {8555C3C7-F99C-48B3-838B-06682E0BC02E}
+		{D3908111-928A-450B-B2E7-A01AFC536AC6} = {8555C3C7-F99C-48B3-838B-06682E0BC02E}
+		{471B6905-067D-4852-8E2B-DA547DBB7313} = {8555C3C7-F99C-48B3-838B-06682E0BC02E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69BAA96F-930B-477D-8C59-8A773EC7A972}

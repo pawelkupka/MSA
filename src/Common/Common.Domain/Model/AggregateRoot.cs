@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace Common.Domain.Model
+﻿namespace Common.Domain.Model
 {
     public abstract class AggregateRoot
     {

@@ -1,8 +1,5 @@
-﻿using MediatR;
+﻿namespace Common.Domain.Model;
 
-namespace Common.Domain.Model
+public interface IDomainEvent
 {
-    public interface IDomainEvent : INotification
-    {
-    }
 }
