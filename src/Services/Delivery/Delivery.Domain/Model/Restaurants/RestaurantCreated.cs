@@ -1,3 +1,5 @@
-﻿namespace Delivery.Domain.Model.Restaurants;
+﻿using Common.Domain.Model;
 
-public record RestaurantCreated(Guid RestaurantId, string Name, RestaurantAddress Address);
+namespace Delivery.Domain.Model.Restaurants;
+
+public record RestaurantCreated(Guid RestaurantId, string Name, RestaurantAddress Address) : IDomainEvent;

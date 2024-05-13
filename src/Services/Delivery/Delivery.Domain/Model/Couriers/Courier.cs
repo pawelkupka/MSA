@@ -1,28 +1,30 @@
-﻿namespace Delivery.Domain.Model.Couriers;
+﻿using Common.Domain.Model;
 
-public class Courier
+namespace Delivery.Domain.Model.Couriers;
+
+public class Courier(string name, bool available)
 {
-    public Courier(string name, bool available)
+    public Guid Id { get; } = Guid.NewGuid();
+    public string Name { get; } = name;
+    public bool Available { get; private set; } = available;
+    public CourierDeliveryPlan DeliveryPlan { get; } = new CourierDeliveryPlan();
+
+    public static (Courier, List<IDomainEvent>) Create(string name, bool available)
     {
-        Id = Guid.NewGuid();
-        Name = name;
-        Available = available;
-        DeliveryPlan = new CourierDeliveryPlan();
+        var courier = new Courier(name, available);
+        return (courier, [new CourierCreated(courier.Id, courier.Name, courier.Available, courier.DeliveryPlan)]);
     }
 
-    public Guid Id { get; }
-    public string Name { get; }
-    public bool Available { get; private set; }
-    public CourierDeliveryPlan DeliveryPlan { get; }
-
-    public void MakeAvailable()
+    public IEnumerable<IDomainEvent> MakeAvailable()
     {
         Available = true;
+        return [];
     }
 
-    public void MakeUnavailable()
+    public IEnumerable<IDomainEvent> MakeUnavailable()
     {
         Available = false;
+        return [];
     }
 
     public void AddAction(CourierAction action)

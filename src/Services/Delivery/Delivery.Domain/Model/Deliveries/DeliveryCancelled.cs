@@ -1,6 +1,8 @@
-﻿namespace Delivery.Domain.Model.Deliveries;
+﻿using Common.Domain.Model;
+
+namespace Delivery.Domain.Model.Deliveries;
 
 public record DeliveryCancelled(
     Guid DeliveryId,
     Guid? CourierId,
-    DeliveryStatus Status);
+    DeliveryStatus Status) : IDomainEvent;

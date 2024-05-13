@@ -1,46 +1,39 @@
-﻿namespace Delivery.Domain.Model.Deliveries;
+﻿using Common.Domain.Model;
 
-public class Delivery
+namespace Delivery.Domain.Model.Deliveries;
+
+public class Delivery(Guid orderId, Guid restaurantId, DeliveryPickupAddress pickupAddress, DeliveryAddress deliveryAddress)
 {
-    public Delivery(
-            Guid orderId,
-            Guid restaurantId,
-            DeliveryPickupAddress pickupAddress,
-            DeliveryAddress deliveryAddress)
-    {
-        Id = Guid.NewGuid();
-        OrderId = orderId;
-        RestaurantId = restaurantId;
-        PickupAddress = pickupAddress;
-        DeliveryAddress = deliveryAddress;
-        Status = DeliveryStatus.Pending;
-        //AddDomainEvent(new DeliveryCreated(DeliveryId, OrderId, RestaurantId, PickupAddress, DeliveryAddress, Status));
-    }
-
-    public Guid Id { get; private set; }
-    public Guid RestaurantId { get; private set; }
-    public Guid OrderId { get; private set; }
+    public Guid Id { get; } = Guid.NewGuid();
+    public Guid RestaurantId { get; } = restaurantId;
+    public Guid OrderId { get; } = orderId;
     public Guid? CourierId { get; private set; }
     public DateTime? WhenReadyForPickup { get; private set; }
     public DateTime? WhenPickedUp { get; private set; }
     public DateTime? WhenDelivered { get; private set; }
-    public DeliveryPickupAddress PickupAddress { get; private set; }
-    public DeliveryAddress DeliveryAddress { get; private set; }
-    public DeliveryStatus Status { get; private set; }
+    public DeliveryPickupAddress PickupAddress { get; } = pickupAddress;
+    public DeliveryAddress DeliveryAddress { get; } = deliveryAddress;
+    public DeliveryStatus Status { get; private set; } = DeliveryStatus.Pending;
     public bool HasAssignedCourier => CourierId.HasValue;
 
-    public void Schedule(Guid courierId, DateTime whenReadyForPickup)
+    public static (Delivery, List<IDomainEvent>) Create(Guid orderId, Guid restaurantId, DeliveryPickupAddress pickupAddress, DeliveryAddress deliveryAddress)
+    {
+        var delivery = new Delivery(orderId, restaurantId, pickupAddress, deliveryAddress);
+        return (delivery, [new DeliveryCreated(delivery.Id, delivery.OrderId, delivery.RestaurantId, delivery.PickupAddress, delivery.DeliveryAddress, delivery.Status)]);
+    }
+
+    public IEnumerable<IDomainEvent> Schedule(Guid courierId, DateTime whenReadyForPickup)
     {
         CourierId = courierId;
         WhenReadyForPickup = whenReadyForPickup;
         Status = DeliveryStatus.Scheduled;
-        //AddDomainEvent(new DeliveryScheduled(DeliveryId, CourierId, WhenReadyForPickup, Status));
+        return [new DeliveryScheduled(Id, CourierId, WhenReadyForPickup, Status)];
     }
 
-    public void Cancel()
+    public IEnumerable<IDomainEvent> Cancel()
     {
         CourierId = null;
         Status = DeliveryStatus.Cancelled;
-        //AddDomainEvent(new DeliveryCancelled(DeliveryId, CourierId, Status));
+        return [new DeliveryCancelled(Id, CourierId, Status)];
     }
 }

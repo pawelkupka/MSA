@@ -3,6 +3,5 @@
 public interface IRestaurantRepository
 {
     Task<Restaurant> FindByIdAsync(Guid restaurantId);
-    Task AddAsync(Restaurant restaurant);
-    Task UpdateAsync(Restaurant restaurant);
+    Task SaveAsync(Restaurant restaurant);
 }

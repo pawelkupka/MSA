@@ -34,14 +34,15 @@ public static class CancelDelivery
         public async Task Handle(Command command, CancellationToken cancellationToken)
         {
             var delivery = await _deliveryRepository.FindByOrderIdAsync(command.OrderId);
-            delivery.Cancel();
-            await _deliveryRepository.UpdateAsync(delivery);
+            var events = delivery.Cancel();
+            await _deliveryRepository.SaveAsync(delivery);
             if (delivery.HasAssignedCourier)
             {
                 var courier = await _courierRepository.FindByIdAsync(delivery.CourierId.Value);
                 courier.RemoveDelivery(delivery.Id);
-                await _courierRepository.UpdateAsync(courier);
+                await _courierRepository.SaveAsync(courier);
             }
+            domainEventPublisher.publish(delivery, events);
         }
     }
 }

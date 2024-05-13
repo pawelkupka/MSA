@@ -1,4 +1,6 @@
-﻿namespace Delivery.Domain.Model.Deliveries;
+﻿using Common.Domain.Model;
+
+namespace Delivery.Domain.Model.Deliveries;
 
 public record DeliveryCreated(
     Guid DeliveryId, 
@@ -6,4 +8,4 @@ public record DeliveryCreated(
     Guid RestaurantId, 
     DeliveryPickupAddress PickupAddress, 
     DeliveryAddress DeliveryAddress, 
-    DeliveryStatus Status);
+    DeliveryStatus Status) : IDomainEvent;
